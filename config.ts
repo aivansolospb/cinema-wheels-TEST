@@ -1,0 +1,1 @@
+export const API_BASE_URL = 'https://cinemawheels-test1.aivansolo-spb.workers.dev/api';
