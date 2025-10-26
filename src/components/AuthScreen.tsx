@@ -67,7 +67,7 @@ const AuthScreen: React.FC<AuthScreenProps> = ({ onLoginSuccess }) => {
     };
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen p-4 text-center">
+        <div className="flex flex-col items-center justify-center min-h-screen p-4 text-center animate-fadeIn">
             <div className="w-full max-w-sm">
                 <UserIcon className="w-16 h-16 mx-auto text-tg-hint" />
                 <h1 className="mt-4 text-2xl font-bold text-tg-text">Добро пожаловать</h1>

@@ -57,7 +57,7 @@ const EditListScreen: React.FC<EditListScreenProps> = ({ user, onEditReport, onB
     };
 
     return (
-        <div className="p-4">
+        <div className="p-4 animate-fadeIn">
             <div className="flex items-center justify-between pb-4 mb-4 border-b border-gray-200 dark:border-gray-700">
                 <h1 className="text-xl font-bold">Последние 10 отчетов</h1>
             </div>
@@ -70,8 +70,12 @@ const EditListScreen: React.FC<EditListScreenProps> = ({ user, onEditReport, onB
                     {reports.length === 0 ? (
                         <p className="text-center text-tg-hint">Нет отчетов для редактирования.</p>
                     ) : (
-                        reports.map(report => (
-                            <div key={report.report_id} className="flex items-center justify-between p-3 bg-tg-secondary-bg rounded-lg">
+                        reports.map((report, index) => (
+                            <div 
+                                key={report.report_id} 
+                                className="flex items-center justify-between p-3 bg-tg-secondary-bg rounded-lg animate-fadeInUp opacity-0"
+                                style={{ animationDelay: `${index * 75}ms` }}
+                            >
                                 <div className="flex flex-col">
                                     <span className="text-sm font-medium text-tg-hint">{formatDate(report.payload.date)}</span>
                                     <span className="font-semibold text-tg-text">{report.payload.project || 'Без проекта'}</span>

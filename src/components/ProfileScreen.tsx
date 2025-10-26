@@ -68,7 +68,7 @@ const ProfileScreen: React.FC<ProfileScreenProps> = ({ user, onNavigate, onNameC
     }
 
     return (
-        <div className="p-4">
+        <div className="p-4 animate-fadeIn">
             {isLoading && <Loader />}
             <div className="flex flex-col items-center pt-4 pb-6 text-center">
                  <ProfileIcon className="w-20 h-20 mb-4 text-tg-hint" />

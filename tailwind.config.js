@@ -17,6 +17,30 @@ export default {
         'tg-error': '#ff3b30',
         'tg-success': '#34c759',
       },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: 0 },
+          '100%': { opacity: 1 },
+        },
+        fadeInUp: {
+          '0%': { opacity: 0, transform: 'translateY(10px)' },
+          '100%': { opacity: 1, transform: 'translateY(0)' },
+        },
+        scaleIn: {
+          '0%': { opacity: 0, transform: 'scale(0.95)' },
+          '100%': { opacity: 1, transform: 'scale(1)' },
+        },
+        slideInUp: {
+            '0%': { transform: 'translateY(100%)' },
+            '100%': { transform: 'translateY(0)' },
+        }
+      },
+      animation: {
+        fadeIn: 'fadeIn 0.4s ease-out forwards',
+        fadeInUp: 'fadeInUp 0.5s ease-out forwards',
+        scaleIn: 'scaleIn 0.2s ease-out forwards',
+        slideInUp: 'slideInUp 0.35s cubic-bezier(.21,1.02,.73,1) forwards',
+      },
     },
   },
   plugins: [],

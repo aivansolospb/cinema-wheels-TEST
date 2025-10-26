@@ -177,7 +177,7 @@ const MainScreen: React.FC<MainScreenProps> = ({ user, editingReport, onReportSu
 
     return (
         <div className="p-4 pb-20">
-            <header className="flex items-center justify-between pb-4 mb-4 border-b border-gray-200 dark:border-gray-700">
+            <header className="flex items-center justify-between pb-4 mb-4 border-b border-gray-200 dark:border-gray-700 animate-fadeIn">
                 <h1 className="text-xl font-bold">
                   {editingReport ? `Редактирование (ID: ${editingReport.report_id})` : 'Отчёт о смене'}
                   {user.role === 'admin' && ' (Админка)'}
@@ -185,7 +185,7 @@ const MainScreen: React.FC<MainScreenProps> = ({ user, editingReport, onReportSu
                 <button onClick={onProfileClick}><ProfileIcon className="w-8 h-8 text-tg-link" /></button>
             </header>
             
-            <form className="space-y-5">
+            <form className="space-y-5 animate-fadeInUp">
                 {/* Date */}
                 <div>
                     <label htmlFor="date" className="block text-sm font-medium">Дата</label>
@@ -227,7 +227,7 @@ const MainScreen: React.FC<MainScreenProps> = ({ user, editingReport, onReportSu
                 <div>
                     <label htmlFor="trailer" className="block text-sm font-medium">Прицеп</label>
                     <select id="trailer" value={report.trailer} onChange={handleInputChange} className={getInputClass('trailer')}>
-                        <option value="">— выберите прицеп —</option>
+                        <option value="">— нет прицепа —</option>
                         {formData?.trailers.map(t => <option key={t.vehicle_name} value={t.vehicle_name}>{t.vehicle_name}</option>)}
                     </select>
                 </div>

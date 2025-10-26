@@ -16,11 +16,11 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children, confirm
 
     return (
         <div 
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-60"
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-60 animate-fadeIn"
             onClick={onClose}
         >
             <div 
-                className="relative w-full max-w-md p-6 mx-auto bg-tg-bg rounded-xl shadow-lg flex flex-col gap-4"
+                className="relative w-full max-w-md p-6 mx-auto bg-tg-bg rounded-xl shadow-lg flex flex-col gap-4 animate-scaleIn"
                 onClick={(e) => e.stopPropagation()}
             >
                 <h2 className="text-xl font-semibold text-center text-tg-text">{title}</h2>
