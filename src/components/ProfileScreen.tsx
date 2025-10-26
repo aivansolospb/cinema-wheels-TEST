@@ -81,6 +81,10 @@ const ProfileScreen: React.FC<ProfileScreenProps> = ({ user, onNavigate, onNameC
                 <MenuItem icon={<ListIcon className="w-6 h-6" />} label="Редактировать отчеты" onClick={() => onNavigate('editList')} />
             </div>
 
+            <div className="mt-8 text-center text-xs text-tg-hint">
+                Версия 1.1.0
+            </div>
+
             <Modal
                 isOpen={isModalOpen}
                 onClose={() => setModalOpen(false)}
