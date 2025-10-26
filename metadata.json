@@ -1,0 +1,5 @@
+{
+  "name": "Cinema Wheels Reporter",
+  "description": "A web application for drivers to submit and manage their daily work shift reports for film production transportation.",
+  "requestFramePermissions": []
+}
